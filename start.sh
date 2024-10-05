@@ -14,7 +14,7 @@ conda activate facefusion
 # Get Facefusion from GitHub
 if [ ! -d "facefusion" ]
 then
-  git clone https://github.com/facefusion/facefusion --branch 2.6.1 --single-branch
+  git clone https://github.com/facefusion/facefusion --branch 3.0.0 --single-branch
 fi
 
 # Update the installation if the parameter "update" was passed by running
@@ -35,6 +35,7 @@ then
   cd ..
   pip install pyngrok
   conda install -y ffmpeg
+  pip install onnxruntime-gpu==1.19.2
 fi
 
 # Start facefusion with ngrok
